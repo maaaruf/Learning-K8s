@@ -18,5 +18,5 @@ spec:
       - name: sampleapi
         image: maaaruf/sampleapi
         ports:
-        - containerHttpPort: 80
-        - containerHttpsPort: 443
+        - containerPort: 80
+        - containerPort: 443
