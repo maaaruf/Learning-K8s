@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sampleapi-deployment
+  labels:
+    app: sampleapi
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sampleapi
+  template:
+    metadata:
+      labels:
+        app: sampleapi
+    spec:
+      containers:
+      - name: sampleapi
+        image: maaaruf/sampleapi
+        ports:
+        - containerHttpPort: 80
+        - containerHttpsPort: 443
